@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="login">
+        <h1>Iris species Prediction</h1>
+        <h2>By Satyam</h2>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="number"  step="0.01" name="sepl"  placeholder="Sepal Length (cm)" required="required" />
+            <input type="number" step="0.01" name="sepw" placeholder="Sepal Width (cm)" required="required" />
+            <input type="number" step="0.01" name="petl" placeholder="Petal Length (cm)" required="required" />
+            <input type="number" step="0.01" name="petw" placeholder="Petal Width (cm)" required="required" />
+            <br><button type="number" class="btn btn-primary btn-block btn-large">Predict</button></br>
+        </form>
+    
+       <br>
+       <br>
+       {{ prediction_text }}
+    
+     </div>
+</body>
+</html>
