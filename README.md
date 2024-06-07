@@ -16,5 +16,7 @@
    `pip install -r requirements.txt`
 5. command for training your model
    `python train.py`
-6. command for running your model 
+6. command for testing your model
+   `python test.py`
+7. command for running your model 
     `python app.py`
